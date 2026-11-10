@@ -1,0 +1,31 @@
+@import "./App.css";
+
+.hero-photo {
+  background-image: url("https://images.pexels.com/photos/14944259/pexels-photo-14944259.jpeg?auto=compress&cs=tinysrgb&w=2200");
+}
+
+.scenic-page {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(12, 25, 16, 0.95),
+      rgba(13, 27, 18, 0.87) 52%,
+      rgba(12, 26, 17, 0.72)
+    ),
+    url("https://images.pexels.com/photos/14944259/pexels-photo-14944259.jpeg?auto=compress&cs=tinysrgb&w=2200");
+}
+
+.button-small {
+  white-space: nowrap;
+}
+
+@media (max-width: 400px) {
+  .nav-shell {
+    width: calc(100% - 30px);
+  }
+
+  .brand-copy small {
+    font-size: 6px;
+    letter-spacing: 0.25px;
+  }
+}
