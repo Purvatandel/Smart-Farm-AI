@@ -322,10 +322,7 @@ def crop_recommendation():
         features = np.array([[n, p, k, temp, humidity, ph, rainfall]], dtype=float)
         raw_prediction = crop_model.predict(features)
 
-        if crop_label_encoder is not None and hasattr(crop_label_encoder, "inverse_transform"):
-            crop_name = str(crop_label_encoder.inverse_transform(raw_prediction)[0])
-        else:
-            crop_name = str(raw_prediction[0])
+        crop_name = str(raw_prediction[0])
 
         confidence = None
         if hasattr(crop_model, "predict_proba"):
