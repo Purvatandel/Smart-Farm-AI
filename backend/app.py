@@ -408,7 +408,7 @@ def get_weather():
             f"daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,wind_speed_10m_max&"
             f"timezone=auto"
         )
-        weather_resp = requests.get(weather_url, timeout=10)
+        weather_resp = requests.get(weather_url, timeout=30)
         if not weather_resp.ok:
             return jsonify({
                 "status": "error",
